@@ -30,3 +30,23 @@ Output: true
 '''
 class Solution:
     def isValid(self, s: str) -> bool:
+        
+        dictf = {
+             ")": "(",
+             "}": "{", 
+             "]": "["
+        }
+        
+        temp = ["q"]
+        for ele in s:
+            if ele in dictf:
+                if temp[-1] == dictf[ele]:
+                    temp.pop()
+                else:
+                    temp.append(ele)            
+            else:
+                temp.append(ele) 
+        if len(temp)==1:
+            return True
+        else:
+            return False
