@@ -14,9 +14,7 @@ Output: 1->1->2->3->4->4
 #         self.next = None
 
 class Solution:
-    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode: 
-
-                
+    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:               
         goal = ListNode(float('-inf'))
         pointer = goal  
         
